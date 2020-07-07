@@ -1,0 +1,161 @@
+<br><br><br>
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-4 order-xl-2">
+            <div class="card card-profile">
+              <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                <div class="d-flex justify-content-between">
+                    <!-- Search form -->
+                    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main" [formGroup]="search">
+                        <label class="form-control-label" for="input-first-name">Enter Parcel Id</label><br>
+                        <div class="form-group mb-0">
+                        <div class="input-group input-group-alternative input-group-merge">
+                            <input class="form-control" placeholder="Parcel Id" type="text">
+                        </div>
+                        </div><br><br><br>
+                        <button style="float: center;" type="submit" class="btn btn-sm btn-primary">Track</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>  
+      <div class="col-xl-8 order-xl-1">
+        <div class="card">
+            <form [formGroup]="addParcel" (ngSubmit)="onSubmit()">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">Manage Parcel</h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <button type="submit" class="btn btn-sm btn-primary">Add</button>
+                    </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <div class="card-body">
+                    <h6 class="heading-small text-muted mb-4">Sender Details</h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Sender Name</label>
+                                    <input type="text" id="input-first-name" formControlName="senderName" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Sender's Contact Number</label>
+                                    <input type="number" id="input-username" class="form-control" formControlName="senderContactNumber" placeholder="Contact Number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <!-- Address -->
+                    <h6 class="heading-small text-muted mb-4">Receiver Details</h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Receiver Name</label>
+                                    <input type="text" id="input-first-name" formControlName="receiverName" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Receiver's Contact Number</label>
+                                    <input type="number" id="input-username" class="form-control" formControlName="receiverContactNumber" placeholder="Contact Number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <!-- Address -->
+                    <h6 class="heading-small text-muted mb-4">Sender Address</h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-address">Address</label>
+                            <input id="input-address" class="form-control" formControlName="senderAddress" placeholder="Sender Address" type="text">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-city">State</label>
+                            <input type="text" id="input-city" class="form-control" formControlName="senderState" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-country">Country</label>
+                            <input type="text" id="input-country" class="form-control" formControlName="senderCountry" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-country">Pincode</label>
+                            <input type="number" id="input-postal-code" class="form-control" formControlName="senderPincode" placeholder="Pincode">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h6 class="heading-small text-muted mb-4">Receiver Address</h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-address">Address</label>
+                            <input id="input-address" class="form-control" formControlName="receiverAddress" placeholder="Receiver Address" type="text">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-city">State</label>
+                            <input type="text" id="input-city" class="form-control" formControlName="receiverState" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-country">Country</label>
+                            <input type="text" id="input-country" class="form-control" formControlName="receiverCountry" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                            <label class="form-control-label" for="input-country">Pincode</label>
+                            <input type="number" id="input-postal-code" class="form-control" formControlName="receiverPincode" placeholder="Pincode">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h6 class="heading-small text-muted mb-4">Parcel Details</h6>
+                    <div class="pl-lg-4">                  
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Parcel Weight</label>
+                                    <input type="number" id="input-email" class="form-control" formControlName="parcelWeight" placeholder="Weight">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-last-name">Parcel Type</label>
+                                    <input type="text" id="input-last-name" class="form-control" formControlName="parcelType" placeholder="Type">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>    
+        </div>
+      </div>
+    </div>
+</div>

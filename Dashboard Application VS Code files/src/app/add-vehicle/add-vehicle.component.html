@@ -1,0 +1,91 @@
+<br><br><br>
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-xl-4 order-xl-2">
+      <div class="card card-profile">
+        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+          <div class="d-flex justify-content-between">
+            <!-- Search form -->
+            <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main" [formGroup]="search">
+              <label class="form-control-label" for="input-first-name">Enter Vehicle Number</label><br>
+              <div class="form-group mb-0">
+                <div class="input-group input-group-alternative input-group-merge">
+                  <input class="form-control" placeholder="Vehicle Number" type="text">
+                </div>
+              </div><br><br><br>
+              <button style="float: center;" type="submit" class="btn btn-sm btn-primary">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="col-xl-8 order-xl-1">
+      <div class="card">
+        <form [formGroup]="register" (ngSubmit)="onSubmit()">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-8">
+                <h3 class="mb-0">Manage Vehicle</h3>
+              </div>
+              <div class="col-4 text-right">
+                <button type="submit" class="btn btn-sm btn-primary">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="heading-small text-muted mb-4">Vehicle information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-username">Plate Number</label>
+                    <input type="text" id="input-username" class="form-control" placeholder="Plate Number">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-username">Vehicle Type</label>
+                    <input type="text" id="input-username" class="form-control" placeholder="Vehicle Type">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Vehicle Model</label>
+                    <input type="text" id="input-first-name" formControlName="name" class="form-control" placeholder="Vehicle Model">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name">Color</label>
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Color">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <h6 class="heading-small text-muted mb-4">Driver information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-username">Driver Name</label>
+                    <input type="text" id="input-username" class="form-control" placeholder="Driver Name">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-username">Contact Number</label>
+                    <input type="text" id="input-username" class="form-control" placeholder="Contact Number">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>    
+      </div>
+    </div>
+  </div>
+</div>
+  

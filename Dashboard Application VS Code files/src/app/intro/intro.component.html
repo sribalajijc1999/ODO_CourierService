@@ -1,0 +1,22 @@
+
+<!--==========================
+    Intro Section 
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
+
+      <div class="intro-img">
+        <img src="assets/img/intro-img.svg" alt="" class="img-fluid">
+      </div>
+
+      <div class="intro-info">
+        <h2>On-Time Delivery Opt<br>(ODO)<br>Courier Service!</h2>
+        <form [formGroup]="trackForm" (ngSubmit)="onSubmit()">
+          <input class="form-control" type="text" formControlName="trackId" placeholder="Track Id" /><br>
+          <button type="submit" class="text-center">Track</button>
+        </form>
+      </div>
+    </div>
+  </section><!-- #intro -->
+<br>
+  <h1>Current Location : {{ onSubmit() }}</h1>

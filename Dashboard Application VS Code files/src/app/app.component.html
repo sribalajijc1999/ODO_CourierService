@@ -1,0 +1,33 @@
+
+<router-outlet></router-outlet>
+<!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--  -->
+        <a routerLink="intro" class="scrollto"><h1 class="text-light" style="text-decoration: none;"><b>ODO</b></h1></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li [ngClass] = "findCss(1)"><a (click) = "isClick(1)">Home</a></li>
+          <li [ngClass] = "findCss(2)"><a (click) = "isClick(2)">About Us</a></li>
+          <li [ngClass] = "findCss(3)"><a (click) = "isClick(3)">Services</a></li>
+          <li [ngClass] = "findCss(4)"><a (click) = "isClick(4)">Contact Us</a></li>
+          <li [ngClass] = "findCss(5)"><a (click) = "isClick(5)">Sign In</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+        <app-intro *ngIf="choice == 1"></app-intro>
+        <app-about *ngIf="choice == 2"></app-about>
+        <app-service *ngIf="choice == 3"></app-service>
+        <app-contact *ngIf="choice == 4"></app-contact>
+        <app-signin *ngIf="choice == 5"></app-signin>
+
